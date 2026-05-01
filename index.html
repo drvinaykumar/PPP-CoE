@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Centre of Excellence in Policy, Pedagogy &amp; Purpose — TSLAS</title>
+  <meta name="description" content="The Centre of Excellence in Policy, Pedagogy & Purpose (PPP) is the flagship research institution of the Thapar School of Liberal Arts & Sciences. One Centre. Many Themes. Impact through innovation." />
+
+  <!-- Fonts: Fraunces (display, optical-sized) + Manrope (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,300..800,0..100;1,9..144,300..800,0..100&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="assets/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Sticky nav -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" aria-label="PPP Centre — Home">
+        <span class="nav__brand-mark">P<span class="nav__brand-amp">·</span>P<span class="nav__brand-amp">·</span>P</span>
+        <span class="nav__brand-sub">Centre of Excellence</span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#themes">Themes</a>
+        <a href="#initiatives">Initiatives</a>
+        <a href="#sub-units">Sub-units</a>
+        <a href="#roadmap">Roadmap</a>
+        <a href="#team">Team</a>
+      </nav>
+      <button class="nav__menu" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero__grid">
+        <div class="hero__meta">
+          <div class="kicker">
+            <span class="kicker__dot"></span>
+            <span>A Flagship Centre of TSLAS, Patiala</span>
+          </div>
+        </div>
+
+        <div class="hero__title-wrap">
+          <h1 class="hero__title">
+            <span class="hero__title-line">Centre of Excellence in</span>
+            <span class="hero__title-line hero__title-italic">Policy, Pedagogy</span>
+            <span class="hero__title-line">&amp; Purpose</span>
+          </h1>
+        </div>
+
+        <div class="hero__logo">
+          <img src="assets/logo.png" alt="TSLAS — Policy, Pedagogy & Purpose" />
+        </div>
+
+        <div class="hero__lede">
+          <p class="hero__tagline"><em>Impact through innovation.</em></p>
+          <p class="hero__paragraph">
+            The PPP Centre is the primary research institution of the
+            Thapar School of Liberal Arts &amp; Sciences — a federal
+            architecture in which eight research themes operate as
+            semi-autonomous scholarly communities under one shared
+            mission. Each theme has its own intellectual agenda;
+            together they hold the boundary where disciplines meet.
+          </p>
+        </div>
+
+        <div class="hero__motto" aria-label="Sanskrit motto">
+          <span class="hero__motto-text">सा विद्या या विमुक्तये</span>
+          <span class="hero__motto-translit">sā vidyā yā vimuktaye</span>
+          <span class="hero__motto-meaning">— that is knowledge which liberates</span>
+        </div>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#themes">Explore the eight themes →</a>
+          <a class="btn btn--ghost" href="#initiatives">Research in progress</a>
+        </div>
+      </div>
+
+      <!-- Subtle decorative network pattern echoing the logo -->
+      <svg class="hero__pattern" aria-hidden="true" viewBox="0 0 600 600" preserveAspectRatio="none">
+        <g stroke="currentColor" stroke-width="0.6" fill="none" opacity="0.55">
+          <line x1="80"  y1="120" x2="220" y2="80"/>
+          <line x1="220" y1="80"  x2="340" y2="160"/>
+          <line x1="80"  y1="120" x2="160" y2="260"/>
+          <line x1="160" y1="260" x2="340" y2="160"/>
+          <line x1="160" y1="260" x2="80"  y2="420"/>
+          <line x1="340" y1="160" x2="460" y2="320"/>
+          <line x1="160" y1="260" x2="300" y2="380"/>
+          <line x1="300" y1="380" x2="460" y2="320"/>
+          <line x1="300" y1="380" x2="220" y2="500"/>
+          <line x1="80"  y1="420" x2="220" y2="500"/>
+          <line x1="460" y1="320" x2="500" y2="500"/>
+          <line x1="220" y1="500" x2="500" y2="500"/>
+        </g>
+        <g fill="currentColor">
+          <circle cx="80"  cy="120" r="3"/>
+          <circle cx="220" cy="80"  r="3"/>
+          <circle cx="340" cy="160" r="3"/>
+          <circle cx="160" cy="260" r="3"/>
+          <circle cx="80"  cy="420" r="3"/>
+          <circle cx="300" cy="380" r="3"/>
+          <circle cx="460" cy="320" r="3"/>
+          <circle cx="220" cy="500" r="3"/>
+          <circle cx="500" cy="500" r="3"/>
+        </g>
+      </svg>
+    </section>
+
+    <!-- ============ ABOUT / FEDERAL MODEL ============ -->
+    <section class="section section--about" id="about">
+      <div class="section__head">
+        <span class="eyebrow">§ 01 &mdash; The Architecture</span>
+        <h2 class="display">One Centre. <em>Many&nbsp;themes.</em></h2>
+      </div>
+
+      <div class="about__grid">
+        <div class="about__copy">
+          <p class="lede">
+            The PPP Centre rests on a deliberate governance philosophy.
+            Intellectual vitality at the boundaries of disciplines is
+            best sustained not by rigid silos, but by a federal model —
+            shared sovereignty at the level of the Centre, meaningful
+            autonomy at the level of each theme.
+          </p>
+          <p>
+            Every funded project at PPP carries a non-negotiable
+            condition: <strong>the meaningful participation of
+            undergraduate students in the research process.</strong>
+            This is not a peripheral criterion — it is a core one,
+            ensuring that the boundary between research and teaching
+            remains permeable, which is precisely the boundary that
+            defines a liberal arts research culture.
+          </p>
+          <p>
+            As themes mature — in faculty, funding, publications, and
+            external partnerships — they are designed to evolve into
+            fully independent units under the PPP umbrella. The Centre
+            is not a fixed structure but a living one: an incubator
+            for the next generation of TSLAS&rsquo;s intellectual
+            infrastructure.
+          </p>
+        </div>
+
+        <aside class="about__pull">
+          <div class="pull">
+            <div class="pull__mark">&ldquo;</div>
+            <p class="pull__text">
+              The model is deliberately analogous to a federal state:
+              shared sovereignty at the level of the Centre, meaningful
+              autonomy at the level of the theme.
+            </p>
+            <p class="pull__attr">— TSLAS Strategy 2030</p>
+          </div>
+
+          <div class="figures">
+            <div class="figure">
+              <span class="figure__num">8</span>
+              <span class="figure__label">Research themes</span>
+            </div>
+            <div class="figure">
+              <span class="figure__num">2</span>
+              <span class="figure__label">Sub&#8209;units<br/>(ACT &amp; IKS)</span>
+            </div>
+            <div class="figure">
+              <span class="figure__num">100%</span>
+              <span class="figure__label">Projects with<br/>UG inclusion</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ EIGHT THEMES ============ -->
+    <section class="section section--themes" id="themes">
+      <div class="section__head">
+        <span class="eyebrow">§ 02 &mdash; The Eight Themes</span>
+        <h2 class="display">Where the work <em>lives.</em></h2>
+        <p class="section__sub">
+          Eight domains in which TSLAS faculty have built scholarly
+          momentum and where the liberal arts have a distinctive
+          analytical contribution to make.
+        </p>
+      </div>
+
+      <div class="themes-grid">
+
+        <article class="theme" style="--accent:#C73E1D">
+          <header class="theme__head">
+            <span class="theme__num">01</span>
+            <span class="theme__tag">Policy</span>
+          </header>
+          <h3 class="theme__title">Higher Education Policy &amp; Governance</h3>
+          <p class="theme__body">
+            Evidence-based research informing policy and institutional
+            transformation for the universities of the future — locally
+            and globally. TSLAS as a site of scholarly reflection on
+            the very conditions that govern its own existence.
+          </p>
+          <p class="theme__q">
+            <span class="theme__q-mark">?</span>
+            Anchored by the Thapar Higher Education Survey (THES) — a
+            longitudinal four-year cycle.
+          </p>
+        </article>
+
+        <article class="theme" style="--accent:#E8B53F">
+          <header class="theme__head">
+            <span class="theme__num">02</span>
+            <span class="theme__tag">Pedagogy</span>
+          </header>
+          <h3 class="theme__title">Pedagogy &amp; Curricular Innovation</h3>
+          <p class="theme__body">
+            Designing and testing new models of teaching, assessment,
+            and engagement aligned with the realities of the digital,
+            AI-driven era — with a particular focus on
+            <em>soft pedagogical interventions</em>.
+          </p>
+          <p class="theme__q">
+            <span class="theme__q-mark">?</span>
+            Subtle, low-cost shifts in questioning, framing, sequencing,
+            feedback, and relational tone — that profoundly reshape
+            learning.
+          </p>
+        </article>
+
+        <article class="theme" style="--accent:#3A6FB0">
+          <header class="theme__head">
+            <span class="theme__num">03</span>
+            <span class="theme__tag">Science</span>
+          </header>
+          <h3 class="theme__title">Science of Learning</h3>
+          <p class="theme__body">
+            Understanding how humans learn — from neurons to networks —
+            and how technology, motivation, and context shape the
+            learning process. Bridging cognitive psychology,
+            neuroscience, and educational practice.
+          </p>
+          <p class="theme__q">
+            <span class="theme__q-mark">?</span>
+            How does chronic AI co-pilot use affect long-term memory
+            and executive function?
+          </p>
+        </article>
+
+        <article class="theme" style="--accent:#4A7C3F">
+          <header class="theme__head">
+            <span class="theme__num">04</span>
+            <span class="theme__tag">Sustainability</span>
+          </header>
+          <h3 class="theme__title">Sustainability &amp; Human Flourishing</h3>
+          <p class="theme__body">
+            How can higher education nurture a generation of learners
+            who see sustainability not as sacrifice, but as a joyful
+            expression of human flourishing and excellence-seeking?
+          </p>
+          <p class="theme__q">
+            <span class="theme__q-mark">?</span>
+            Three pillars: ecosystem restoration, renewable energy,
+            and circular economy — under a 6E framework.
+          </p>
+        </article>
+
+        <article class="theme" style="--accent:#D87A2A">
+          <header class="theme__head">
+            <span class="theme__num">05</span>
+            <span class="theme__tag">Mind &amp; Culture</span>
+          </header>
+          <h3 class="theme__title">Mind and Culture Studies</h3>
+          <p class="theme__body">
+            How personality and culture interact to shape thought,
+            behaviour, and institutions — studied on their own
+            conceptual terms rather than through Western templates.
+          </p>
+          <p class="theme__q">
+            <span class="theme__q-mark">?</span>
+            Towards an Indigenous Culture Inventory for India and
+            South Asia: Excellence Orientation, Micro-Collectivism,
+            Binary Orientation.
+          </p>
+        </article>
+
+        <article class="theme" style="--accent:#9B2D2A">
+          <header class="theme__head">
+            <span class="theme__num">06</span>
+            <span class="theme__tag">Neuro</span>
+          </header>
+          <h3 class="theme__title">Neuro-Management</h3>
+          <p class="theme__body">
+            The application of neuroscience and cognitive science to
+            leadership, creativity, decision-making, and organisational
+            behaviour — through experimental methods and data-driven
+            analysis.
+          </p>
+          <p class="theme__q">
+            <span class="theme__q-mark">?</span>
+            EEG and eye-tracking studies on cognitive load, team
+            synchronisation, and consumer attention.
+          </p>
+        </article>
+
+        <article class="theme" style="--accent:#E07A2A">
+          <header class="theme__head">
+            <span class="theme__num">07</span>
+            <span class="theme__tag">IKS</span>
+          </header>
+          <h3 class="theme__title">Indian Knowledge System</h3>
+          <p class="theme__body">
+            How can Indian Knowledge Systems contribute to a
+            contemporary global philosophy of education, sustainability,
+            and human flourishing — without losing epistemic integrity
+            or cultural depth?
+          </p>
+          <p class="theme__q">
+            <span class="theme__q-mark">?</span>
+            Rigorously empirical: reclaiming indigenous epistemologies
+            through comparative and quantitative scholarship.
+          </p>
+        </article>
+
+        <article class="theme" style="--accent:#5B6F8E">
+          <header class="theme__head">
+            <span class="theme__num">08</span>
+            <span class="theme__tag">AI</span>
+          </header>
+          <h3 class="theme__title">AI for Education</h3>
+          <p class="theme__body">
+            How artificial intelligence is reshaping teaching, learning,
+            and institutional design across India&rsquo;s higher
+            education landscape — with a central focus on ethical
+            deployment.
+          </p>
+          <p class="theme__q">
+            <span class="theme__q-mark">?</span>
+            The scholarly infrastructure behind TSLAS&rsquo;s
+            DISHA Model and AI Readiness Framework.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ INITIATIVES ============ -->
+    <section class="section section--initiatives" id="initiatives">
+      <div class="section__head">
+        <span class="eyebrow">§ 03 &mdash; Our Journey, Till Now</span>
+        <h2 class="display">Research <em>in motion.</em></h2>
+        <p class="section__sub">
+          Concrete projects already underway across the eight themes.
+        </p>
+      </div>
+
+      <div class="init-grid">
+
+        <div class="init">
+          <header class="init__head">
+            <span class="init__tag">Policy</span>
+            <span class="init__date">2026 &rarr; 2030</span>
+          </header>
+          <h3 class="init__title">Thapar Higher Education Survey (THES)</h3>
+          <p class="init__body">
+            A structured four-year cycle of stakeholder surveys mapping
+            expectations, teaching quality, student progression, and
+            employer evaluations under NEP&nbsp;2020 — building a
+            longitudinal evidence base for institutional policy.
+          </p>
+          <ul class="init__list">
+            <li><span>Y1</span> Fresh-Student Survey</li>
+            <li><span>Y2</span> Faculty &amp; Administration Survey</li>
+            <li><span>Y3</span> Senior-Student Survey</li>
+            <li><span>Y4</span> Employer Survey</li>
+          </ul>
+        </div>
+
+        <div class="init">
+          <header class="init__head">
+            <span class="init__tag">Pedagogy</span>
+            <span class="init__date">Active</span>
+          </header>
+          <h3 class="init__title">Soft Pedagogical Interventions</h3>
+          <p class="init__body">
+            Three research thrusts bridging evidence-based classroom
+            strategies with scalable institutional practice.
+          </p>
+          <ul class="init__list">
+            <li><span>·</span> Instructor cues &amp; growth mindset</li>
+            <li><span>·</span> Challenge-based pedagogy</li>
+            <li><span>·</span> Observational learning &amp; faculty think-alouds</li>
+            <li><span>·</span> Nano-module shorts as augmentation</li>
+          </ul>
+        </div>
+
+        <div class="init">
+          <header class="init__head">
+            <span class="init__tag">Science of Learning</span>
+            <span class="init__date">Ongoing</span>
+          </header>
+          <h3 class="init__title">AI &amp; Cognition</h3>
+          <p class="init__body">
+            How does a learner&rsquo;s cognitive load shift when moving
+            from generating an idea with AI to critiquing an
+            AI-generated one?
+          </p>
+          <ul class="init__list">
+            <li><span>·</span> Long-term memory &amp; AI co-pilot use</li>
+            <li><span>·</span> Cognitive Budget Framework</li>
+            <li><span>·</span> NASA-TLX task load profiling</li>
+            <li><span>·</span> LLM comparative study (Claude, ChatGPT, Copilot, Gemini)</li>
+          </ul>
+        </div>
+
+        <div class="init">
+          <header class="init__head">
+            <span class="init__tag">Sustainability</span>
+            <span class="init__date">In progress</span>
+          </header>
+          <h3 class="init__title">The 6E Framework</h3>
+          <p class="init__body">
+            Three interconnected pillars guiding research toward
+            ecological resilience, clean energy, and sustainable
+            resource use.
+          </p>
+          <ul class="init__list">
+            <li><span>·</span> Ecosystem restoration &amp; biodiversity</li>
+            <li><span>·</span> Renewable energy transitions</li>
+            <li><span>·</span> Circular economy &amp; reuse</li>
+          </ul>
+        </div>
+
+        <div class="init">
+          <header class="init__head">
+            <span class="init__tag">Mind &amp; Culture</span>
+            <span class="init__date">Active</span>
+          </header>
+          <h3 class="init__title">South Asian Cultural &amp; Personality Dimensions</h3>
+          <p class="init__body">
+            An empirical project to develop a culturally grounded
+            inventory across regions and professions, with publications
+            and global collaborations.
+          </p>
+          <ul class="init__list">
+            <li><span>·</span> Excellence Orientation</li>
+            <li><span>·</span> Micro-Collectivism</li>
+            <li><span>·</span> Binary Orientation</li>
+            <li><span>·</span> Dharma · Seva · Santulan · Nishkam Karma</li>
+          </ul>
+        </div>
+
+        <div class="init">
+          <header class="init__head">
+            <span class="init__tag">Neuro-Management</span>
+            <span class="init__date">Ongoing</span>
+          </header>
+          <h3 class="init__title">AI-Driven Design &amp; Consumer Insights</h3>
+          <p class="init__body">
+            EEG and eye-tracking research at the boundary of cognitive
+            science, design, and leadership.
+          </p>
+          <ul class="init__list">
+            <li><span>·</span> Smart poster design</li>
+            <li><span>·</span> Customer interest prediction</li>
+            <li><span>·</span> Low-cost neuromarketing platform</li>
+            <li><span>·</span> Neurocognitive leadership study</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ SUB UNITS ============ -->
+    <section class="section section--units" id="sub-units">
+      <div class="section__head">
+        <span class="eyebrow">§ 04 &mdash; Sub&nbsp;Units</span>
+        <h2 class="display">Themes <em>becoming</em> centres.</h2>
+        <p class="section__sub">
+          Two of the PPP themes have already achieved enough
+          institutional weight to operate as sub-units, with their own
+          scholarly identities and external profiles.
+        </p>
+      </div>
+
+      <div class="units-grid">
+
+        <article class="unit unit--act">
+          <div class="unit__label">Sub&#8209;unit</div>
+          <h3 class="unit__title">ACT</h3>
+          <p class="unit__sub">Art, Cognition &amp; Technology Centre</p>
+          <p class="unit__body">
+            ACT applies neuroscience and cognitive science to
+            leadership, creativity, and decision-making. Through
+            experimental methods and data-driven analysis, it develops
+            new frameworks for understanding human cognition in
+            technological and managerial contexts. Connected directly
+            to TSLAS&rsquo;s eye-tracking laboratory and to the
+            ambition of building a full Cognitive and Neuroscience lab
+            within this strategy period.
+          </p>
+          <p class="unit__trajectory">
+            Trajectory: from PPP sub-unit toward fully independent
+            Centre of Excellence.
+          </p>
+          <a class="unit__link" href="https://act.thapar.edu" target="_blank" rel="noopener">
+            act.thapar.edu →
+          </a>
+        </article>
+
+        <article class="unit unit--iks">
+          <div class="unit__label">Sub&#8209;unit</div>
+          <h3 class="unit__title">IKS</h3>
+          <p class="unit__sub">Thapar Indian Knowledge System Centre</p>
+          <p class="unit__body">
+            One of TSLAS&rsquo;s most distinctive institutional assets
+            — an empirically rigorous engagement with the
+            subcontinent&rsquo;s own intellectual traditions:
+            epistemologies, sciences, aesthetic philosophies, and
+            political thought. It reclaims indigenous knowledge not
+            through nostalgia but through comparative scholarship
+            tested against the evidence.
+          </p>
+          <ul class="unit__list">
+            <li><strong>Post-Doctoral Research</strong> — Nyāya, funded by IKSHA</li>
+            <li><strong>PhD Fellowships</strong> — Consciousness &amp; Mind</li>
+            <li><strong>Heritage Technology</strong> — Kaithi OCR System</li>
+            <li><strong>International Symposium</strong> — Bhakti, July 2026</li>
+            <li><strong>Bṛhat Partnership</strong> — Sanskrit video content</li>
+          </ul>
+          <a class="unit__link" href="https://iks.thapar.edu" target="_blank" rel="noopener">
+            iks.thapar.edu →
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============ DISHA CONNECTION ============ -->
+    <section class="section section--disha">
+      <div class="disha-card">
+        <span class="eyebrow eyebrow--light">§ 05 &mdash; The DISHA Connection</span>
+        <h2 class="display display--inverse">
+          The PPP Centre is the scholarly home of <em>DISHA</em>.
+        </h2>
+        <p class="disha-card__body">
+          The Pedagogy &amp; Curricular Innovation and AI for Education
+          themes form the institutional home of DISHA — the
+          India-centred educational philosophy at the heart of
+          TSLAS&rsquo;s Strategy 2030. Faculty here do not merely
+          implement the model; they study, evaluate, and publish on
+          it — ensuring the model improves over time through evidence
+          rather than assumption.
+        </p>
+        <div class="disha-letters" aria-label="DISHA dimensions">
+          <div class="dl"><span class="dl__letter">D</span><span class="dl__word">Discovery</span></div>
+          <div class="dl"><span class="dl__letter">I</span><span class="dl__word">Integration</span></div>
+          <div class="dl"><span class="dl__letter">S</span><span class="dl__word">Skill &amp; Society</span></div>
+          <div class="dl"><span class="dl__letter">H</span><span class="dl__word">Human Flourishing</span></div>
+          <div class="dl"><span class="dl__letter">A</span><span class="dl__word">Agency &amp; Action</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ROADMAP ============ -->
+    <section class="section section--roadmap" id="roadmap">
+      <div class="section__head">
+        <span class="eyebrow">§ 06 &mdash; Roadmap</span>
+        <h2 class="display">A living <em>architecture.</em></h2>
+        <p class="section__sub">
+          Three phases through which the PPP Centre matures across
+          Strategy 2030.
+        </p>
+      </div>
+
+      <ol class="roadmap">
+        <li class="phase">
+          <header class="phase__head">
+            <span class="phase__num">Phase 01</span>
+            <span class="phase__years">2025 → 2027</span>
+          </header>
+          <h3 class="phase__title">Foundation &amp; Launch</h3>
+          <p class="phase__body">
+            Activate DISHA Model with the 2026 foundation cohort.
+            Complete AI Readiness Maps. Launch faculty travel grants.
+            Establish Board of Advisors. Hire 15–20 new faculty with
+            emphasis on senior appointments. Set up DS/AI and Digital
+            Humanities starter labs.
+          </p>
+        </li>
+        <li class="phase">
+          <header class="phase__head">
+            <span class="phase__num">Phase 02</span>
+            <span class="phase__years">2027 → 2029</span>
+          </header>
+          <h3 class="phase__title">Consolidation &amp; Expansion</h3>
+          <p class="phase__body">
+            Launch History &amp; Data Science and Digital Humanities
+            majors. Embed DISHA fully across new programmes. Add
+            Cognitive/Neuro lab. Run first cohort of interdisciplinary
+            PhDs. Hold the first annual TSLAS PhD Day. Scale toward
+            850 students.
+          </p>
+        </li>
+        <li class="phase">
+          <header class="phase__head">
+            <span class="phase__num">Phase 03</span>
+            <span class="phase__years">2029 → 2030+</span>
+          </header>
+          <h3 class="phase__title">Maturity &amp; Distinction</h3>
+          <p class="phase__body">
+            Reach 1,000 students with 100 FTE faculty. Host 50 PhD
+            scholars. Launch Brain &amp; Cognitive Science major.
+            Achieve ≥60% interdisciplinary research output. Position
+            TSLAS as a nationally recognised hub for liberal arts
+            education and public discourse.
+          </p>
+        </li>
+      </ol>
+    </section>
+
+    <!-- ============ TEAM ============ -->
+    <section class="section section--team" id="team">
+      <div class="section__head">
+        <span class="eyebrow">§ 07 &mdash; The People</span>
+        <h2 class="display">The minds <em>behind</em> the work.</h2>
+        <p class="section__sub">
+          The faculty leading the PPP Centre&rsquo;s research,
+          programmes, and public engagement — drawn from across
+          TSLAS&rsquo;s disciplines.
+        </p>
+      </div>
+
+      <!-- Founder feature card -->
+      <article class="founder" style="--accent:#C73E1D">
+        <div class="founder__avatar">
+          <span class="member__initials">PN</span>
+            <img class="member__photo" src="assets/team/padmakumar-nair.jpg" alt="Prof Padmakumar Nair" loading="lazy" onerror="this.remove()">
+        </div>
+        <div class="founder__body">
+          <span class="founder__label">Our Founder</span>
+          <h3 class="founder__name">Prof Padmakumar Nair</h3>
+          <p class="founder__role">
+            Director, TIET <span class="founder__sep">·</span>
+            Founding Dean, TSLAS
+          </p>
+          <p class="founder__bio">
+            An accomplished researcher and scholar in leadership
+            development and sustainability, Prof Nair was instrumental
+            in founding TSLAS and continues to shape its India-centred
+            vision for the next generation of liberal arts and
+            sciences education.
+          </p>
+          <a class="founder__link" href="https://tslas.thapar.edu/facultymaster/1" target="_blank" rel="noopener">
+            View profile <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </article>
+
+      <!-- Section divider -->
+      <div class="team-divider">
+        <span class="team-divider__line"></span>
+        <span class="team-divider__label">Team leading the efforts</span>
+        <span class="team-divider__line"></span>
+      </div>
+
+      <!-- Team grid -->
+      <div class="team-grid">
+
+        <a class="member" style="--accent:#C99A2E" href="https://tslas.thapar.edu/facultymaster/67" target="_blank" rel="noopener">
+          <div class="member__avatar">
+            <span class="member__initials">KM</span>
+            <img class="member__photo" src="assets/team/kazuma-mizukoshi.jpg" alt="Dr Kazuma Mizukoshi" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">Dr Kazuma Mizukoshi</h3>
+            <p class="member__discipline">Political Science</p>
+          </div>
+          <span class="member__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="member" style="--accent:#3A6FB0" href="https://tslas.thapar.edu/facultymaster/44" target="_blank" rel="noopener">
+          <div class="member__avatar">
+            <span class="member__initials">RU</span>
+            <img class="member__photo" src="assets/team/rahul-upadhyay.jpg" alt="Dr Rahul Upadhyay" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">Dr Rahul Upadhyay</h3>
+            <p class="member__discipline">Biomedical Signal Processing &amp; AI</p>
+          </div>
+          <span class="member__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="member" style="--accent:#E07A2A" href="https://tslas.thapar.edu/facultymaster/73" target="_blank" rel="noopener">
+          <div class="member__avatar">
+            <span class="member__initials">SB</span>
+            <img class="member__photo" src="assets/team/shruti-krishna-bhat.jpg" alt="Dr Shruti Krishna Bhat" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">Dr Shruti Krishna Bhat</h3>
+            <p class="member__discipline">Indian Philosophy</p>
+          </div>
+          <span class="member__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="member" style="--accent:#4A7C3F" href="https://tslas.thapar.edu/facultymaster/48" target="_blank" rel="noopener">
+          <div class="member__avatar">
+            <span class="member__initials">RP</span>
+            <img class="member__photo" src="assets/team/rabi-prakash.jpg" alt="Dr Rabi Prakash" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">Dr Rabi Prakash</h3>
+            <p class="member__discipline">Sociology</p>
+          </div>
+          <span class="member__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="member" style="--accent:#5B6F8E" href="https://tslas.thapar.edu/facultymaster/3" target="_blank" rel="noopener">
+          <div class="member__avatar">
+            <span class="member__initials">IC</span>
+            <img class="member__photo" src="assets/team/ipshita-chowdhury.jpg" alt="Dr Ipshita Chowdhury" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">Dr Ipshita Chowdhury</h3>
+            <p class="member__discipline">Engineering Psychology</p>
+          </div>
+          <span class="member__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="member" style="--accent:#D87A2A" href="https://tslas.thapar.edu/facultymaster/5" target="_blank" rel="noopener">
+          <div class="member__avatar">
+            <span class="member__initials">AE</span>
+            <img class="member__photo" src="assets/team/adil-edrisi.jpg" alt="Dr Adil Edrisi" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">Dr Adil Edrisi</h3>
+            <p class="member__discipline">Environment &amp; Sustainability</p>
+          </div>
+          <span class="member__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="member" style="--accent:#9B2D2A" href="https://tslas.thapar.edu/facultymaster/68" target="_blank" rel="noopener">
+          <div class="member__avatar">
+            <span class="member__initials">AM</span>
+            <img class="member__photo" src="assets/team/aarushi-mahajan.jpg" alt="Dr Aarushi Mahajan" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">Dr Aarushi Mahajan</h3>
+            <p class="member__discipline">Economic Psychology</p>
+          </div>
+          <span class="member__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="member" style="--accent:#C73E1D" href="https://tslas.thapar.edu/facultymaster/80" target="_blank" rel="noopener">
+          <div class="member__avatar">
+            <span class="member__initials">HK</span>
+            <img class="member__photo" src="assets/team/harsimar-kaur.jpg" alt="Dr Harsimar Kaur" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">Dr Harsimar Kaur</h3>
+            <p class="member__discipline">Strategy &amp; Entrepreneurship</p>
+          </div>
+          <span class="member__arrow" aria-hidden="true">→</span>
+        </a>
+
+        <a class="member" style="--accent:#3A6FB0" href="https://tslas.thapar.edu/facultymaster/25" target="_blank" rel="noopener">
+          <div class="member__avatar">
+            <span class="member__initials">VK</span>
+            <img class="member__photo" src="assets/team/vinay-kumar.jpg" alt="Prof Vinay Kumar" loading="lazy" onerror="this.remove()">
+          </div>
+          <div class="member__body">
+            <h3 class="member__name">Prof Vinay Kumar</h3>
+            <p class="member__discipline">Deep Learning &amp; Computer Vision</p>
+          </div>
+          <span class="member__arrow" aria-hidden="true">→</span>
+        </a>
+
+      </div>
+    </section>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer" id="contact">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <p class="footer__logo">PPP &nbsp;<span>·</span>&nbsp; Centre of Excellence</p>
+          <p class="footer__tag">Impact through innovation.</p>
+        </div>
+
+        <div class="footer__cols">
+          <div class="footer__col">
+            <h4>Centre</h4>
+            <a href="#about">About</a>
+            <a href="#themes">Themes</a>
+            <a href="#initiatives">Initiatives</a>
+            <a href="#sub-units">Sub-units</a>
+            <a href="#roadmap">Roadmap</a>
+            <a href="#team">Team</a>
+          </div>
+          <div class="footer__col">
+            <h4>At TSLAS</h4>
+            <a href="https://www.thapar.edu" target="_blank" rel="noopener">Thapar Institute (TIET)</a>
+            <a href="https://iks.thapar.edu" target="_blank" rel="noopener">IKS Centre</a>
+            <a href="#">DISHA Model</a>
+            <a href="#">AVANI Programme</a>
+          </div>
+          <div class="footer__col">
+            <h4>Reach us</h4>
+            <span>Thapar School of Liberal Arts &amp; Sciences</span>
+            <span>TIET, Patiala</span>
+            <span>Punjab, India</span>
+          </div>
+        </div>
+
+        <div class="footer__rule"></div>
+
+        <div class="footer__bottom">
+          <span>© <span id="yr"></span> Centre of Excellence in Policy, Pedagogy &amp; Purpose · TSLAS · TIET Patiala</span>
+          <span class="footer__motto">सा विद्या या विमुक्तये</span>
+        </div>
+      </div>
+    </footer>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
