@@ -4,14 +4,14 @@
 >
 > A flagship Centre of the Thapar School of Liberal Arts & Sciences (TSLAS), Patiala.
 
-A static website for the **PPP Centre of Excellence** — built as a single, self-contained, light-theme site with editorial typography, a refined liberal-arts aesthetic, and zero build step. Drop it on GitHub Pages and you're live.
+A static website for the **PPP Centre of Excellence** — built as a single, self-contained static site with no build step. Drop it on GitHub Pages and you're live.
 
 ## Stack
 
 - **HTML5** (`index.html`) — semantic, single-page
 - **CSS3** (`styles.css`) — custom properties, no framework, no preprocessor
 - **Vanilla JS** (`script.js`) — sticky nav, mobile menu, scroll reveals
-- **Type**: [Fraunces](https://fonts.google.com/specimen/Fraunces) (display) + [Manrope](https://fonts.google.com/specimen/Manrope) (body), both via Google Fonts
+- **Type**: Fraunces (display), Manrope (text), JetBrains Mono (labels) and Tiro Devanagari Sanskrit (motto), all via Google Fonts
 - **No build tools.** No npm. No bundler. Just three files.
 
 ## File structure
@@ -20,7 +20,7 @@ A static website for the **PPP Centre of Excellence** — built as a single, sel
 .
 ├── index.html          # The page (all content lives here)
 ├── styles.css          # All styles
-├── script.js           # Sticky nav, reveal animations, smooth scroll
+├── script.js           # Nav, theme explorer tabs, ticker, roadmap marker, reveals
 ├── assets/
 │   └── logo.png        # PPP / TSLAS logo
 └── README.md
@@ -49,119 +49,44 @@ For a custom domain (e.g. `ppp.tsl.edu`), add a `CNAME` file with your domain na
 
 ## Editing content
 
-All page content lives in `index.html`, organised by section:
+All content lives in `index.html`.
 
-| Section          | Anchor          | Where to edit                          |
-| ---------------- | --------------- | -------------------------------------- |
-| Hero             | top of page     | `<section class="hero">`               |
-| Federal model    | `#about`        | `<section class="section--about">`     |
-| Eight themes     | `#themes`       | each `<article class="theme">`         |
-| Initiatives      | `#initiatives`  | each `<div class="init">`              |
-| Sub-units        | `#sub-units`    | `<article class="unit">` (ACT, IKS)    |
-| DISHA connection | (no anchor)     | `<section class="section--disha">`     |
-| Roadmap          | `#roadmap`      | each `<li class="phase">`              |
-| Team             | `#team`         | `.founder` + each `<a class="member">` |
-| Footer           | `#contact`      | `<footer class="footer">`              |
+| Section            | Anchor        | Where to edit |
+| ------------------ | ------------- | ------------- |
+| Hero + network     | top of page   | `<section class="hero">`; the network is inline SVG, one `<a class="net__node">` per theme |
+| Project ticker     | —             | `<div class="tick__track">` (one `<span class="tick__item">` per project) |
+| The Federation     | `#about`      | `<section class="sec fed">` |
+| Themes & Projects  | `#themes`     | one `<a class="xtab">` and one `<article class="xpanel">` per theme |
+| Sub-units          | `#sub-units`  | `<article class="unit">` (ACT, IKS) |
+| DISHA              | `#disha`      | `<section class="sec disha">` |
+| Roadmap            | `#roadmap`    | `<div class="tl">`; the "We are here" marker is placed automatically from today's date |
+| People             | `#team`       | `.founder` + each `<a class="person">` |
 
-### Adding real photos to the Team section
+### Adding a project
 
-The Team section (§ 07) ships with elegant initials-based avatars as a placeholder. To replace any one of them with a real photo, do this in two steps:
+Inside the theme's `<article class="xpanel">`, copy an existing `<details class="proj">` block and change its `id` (`p-TT-N`), code, title, status and paragraphs. Then:
 
-**1. Save the photo.** Drop a square photo (ideally 400×400px or larger) into the `assets/team/` folder. Name the file using lowercase with hyphens — e.g. `padmakumar-nair.jpg`, `kazuma-mizukoshi.jpg`, `rahul-upadhyay.jpg`.
+1. update the count in that theme's `<span class="xtab__count">`;
+2. add a `<span class="tick__item">` to the ticker;
+3. update the project total in the hero stats and in the "Explore N projects" button.
 
-You'll need to create the `team` subfolder inside `assets/` the first time you do this. On GitHub: navigate to `assets/`, click **Add file → Create new file**, type `team/.gitkeep` as the filename, commit. Then upload photos there.
+Write-ups on the site do not name individual faculty; people are listed only in the People section.
 
-**2. Edit `index.html`.** Find the team member's `<div class="member__avatar">` (or `<div class="founder__avatar">` for the founder) and replace the `<span class="member__initials">…</span>` with an `<img>` tag.
+Deep links work: `#t-03` opens theme 03, and `#p-07-4` opens project 07.4.
 
-**Before:**
-```html
-<div class="member__avatar">
-  <span class="member__initials">KM</span>
-</div>
-```
+### Team photos
 
-**After:**
-```html
-<div class="member__avatar">
-  <img src="assets/team/kazuma-mizukoshi.jpg" alt="Dr Kazuma Mizukoshi">
-</div>
-```
+Drop a square photo into `assets/team/` using the filename already referenced in `index.html` (e.g. `kazuma-mizukoshi.jpg`). It replaces the initials automatically; if the file is missing, the initials stay.
 
-That's the entire change. The CSS already handles cropping the photo into the circle — you don't need to touch any styles.
+### Colours
 
-You can mix and match: replace some with photos, leave others as initials. They'll look consistent.
-
-If you ever want to revert to initials, just put the `<span class="member__initials">XX</span>` back. The two are interchangeable.
-
-### Adding a new theme
-
-```html
-<article class="theme" style="--accent:#YOURHEX">
-  <header class="theme__head">
-    <span class="theme__num">09</span>
-    <span class="theme__tag">Tag</span>
-  </header>
-  <h3 class="theme__title">Theme Title</h3>
-  <p class="theme__body">Description...</p>
-  <p class="theme__q">
-    <span class="theme__q-mark">?</span>
-    Key research question or anchor.
-  </p>
-</article>
-```
-
-The `--accent` CSS variable controls the theme's signature colour (number, top border on hover, question mark). Pick from the existing palette in `styles.css` (`--c-red`, `--c-gold`, etc.) or set a custom hex.
-
-### Changing colours
-
-Brand colours are defined as CSS custom properties at the top of `styles.css` under `:root`. The full palette is drawn from the logo:
-
-```css
---c-red:     #C73E1D;   /* the red 't' */
---c-gold:    #C99A2E;   /* the yellow 's' */
---c-blue:    #3A6FB0;   /* the blue 'a' */
---c-green:   #4A7C3F;   /* the green accent */
---c-orange:  #D87A2A;   /* the orange 's' */
---c-maroon:  #9B2D2A;
---c-saffron: #E07A2A;
---c-slate:   #5B6F8E;
-```
-
-The dominant page surface is a warm parchment (`#FAF7F1`); the dark accents (footer, DISHA panel) use a warm near-black (`#1F1B16`).
-
-### Replacing the logo
-
-Replace `assets/logo.png` with your file. If you change the filename or extension, update the two references in `index.html`:
-
-```html
-<link rel="icon" type="image/png" href="assets/logo.png">
-...
-<img src="assets/logo.png" alt="...">
-```
-
-## Design notes
-
-- **Editorial, not corporate.** Display type uses [Fraunces](https://fonts.google.com/specimen/Fraunces) at large optical sizes with subtle softness — the goal is "literary journal" rather than "tech startup."
-- **Federal architecture as visual metaphor.** The themes section uses a strict 4-column grid with hairline borders to convey the *one Centre, many themes* model; each card carries a single coloured accent that activates on hover.
-- **Sanskrit motto as a recurring motif.** सा विद्या या विमुक्तये appears in the hero and footer, anchoring the site's India-centred identity.
-- **Restraint.** Colour is used sparingly. Most of the page is ink-on-parchment; accents earn their attention.
-- **Light theme only.** No dark-mode toggle by design — the editorial palette doesn't have a meaningful dark counterpart.
+Each theme carries its own colour through the network node, tab, panel band and project codes. Theme colours are set inline (`style="--c:…"`) on the tab and panel; the base palette is at the top of `styles.css`.
 
 ## Accessibility
 
-- Semantic HTML (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`).
-- Keyboard-navigable mobile menu with `aria-expanded`.
-- Respects `prefers-reduced-motion` (disables scroll reveals).
-- Sufficient colour contrast on body text (≥ 7:1).
-- All interactive elements are `<a>` or `<button>`, never bare divs.
-
-## Browser support
-
-Modern evergreen browsers (Chrome, Firefox, Safari, Edge — last two major versions). Uses `IntersectionObserver`, `backdrop-filter`, and CSS custom properties — all widely supported as of 2025.
-
-## License
-
-The code in this repository is released for use by TSLAS. Content (text, logo, motto) belongs to the Centre of Excellence in Policy, Pedagogy & Purpose, TSLAS, TIET Patiala.
+- Semantic landmarks, a keyboard-operable tab list (arrow keys) for the theme explorer, and native `<details>` for project write-ups.
+- Without JavaScript every theme panel is shown in full.
+- `prefers-reduced-motion` stops the ticker, network pulses and reveal animations.
 
 ---
 
