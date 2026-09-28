@@ -33,7 +33,7 @@
         var on = t.getAttribute('aria-controls') === id;
         t.setAttribute('aria-selected', on ? 'true' : 'false');
         t.tabIndex = on ? 0 : -1;
-        if (on) { found = true; if (focusTab) t.focus(); if (window.innerWidth < 1080) t.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' }); }
+        if (on) { found = true; if (focusTab) t.focus({ preventScroll: true }); var rail = t.parentElement; if (rail.scrollWidth > rail.clientWidth) rail.scrollTo({ left: t.offsetLeft - rail.offsetLeft - 16, behavior: 'smooth' }); }
       });
       panels.forEach(function (p) { p.classList.toggle('is-active', p.id === id); });
       return found;
